@@ -1,16 +1,29 @@
+html { 
+    background: url('img/back1.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
 * {
     box-sizing: border-box;
 }
 
 body {
-    background: #ADD8E6;
-    color: white;
-    font-family: 'Lora', serif;
+    color: black;
+    font-family: 'Abel', sans-serif;
     margin: 0;
+}
+h1 {
+    color: black;
+    font-family: 'Amatic SC', cursive;
+    font-size: 45px;
 }
 
 .container{
     margin: auto;
+    margin-right: 150px;
     max-width: 800px;
     display: flex;
     flex-direction: column;
@@ -22,8 +35,6 @@ body {
 .flex {
     display: flex;
 }
-
-
 
 input, button {
     border: 1px solid #dedede;
@@ -105,21 +116,91 @@ input:focus, button:focus {
     justify-content: center;
     transition: opacity 0.2s ease-in;
     opacity: 0;
-  }
+}
   
-  .meal:hover .meal-info {
+.meal:hover .meal-info {
     opacity: 1;
-  }
+}
   
+.single-meal {
+    margin: 30px auto;
+    width: 70%;
+}
+
+.single-meal h1 {
+    font-family: 'Abel', sans-serif;
+    text-decoration: underline;
+}
+.single-meal img {
+    width: 300px;
+    margin: 15px;
+    border: 4px #fff solid;
+    border-radius: 5px;
+}
+
+.single-meal-info {
+    margin: 0;
+    padding: 0;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.single-meal-info p {
+    margin: 3px;
+}
+
+.inf {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.single-meal ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.single-meal ul li {
+    border: 1px solid #ededed;
+    border-radius: 5px;
+    background-color: #fff;
+    display: inline-block;
+    color: #2d2013;
+    font-weight: bold;
+    padding: 5px;
+    margin: 0 5px 5px 0;
+}
 
 
-
-
-
-@media(max-width: 800px) {}
-@media(max-width: 700px) {}
+@media(max-width: 800px) {
+    .meals {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media(max-width: 700px) {
+    .meals {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 @media(max-width: 500px) {
     input[type=text] {
         width: 100%;
     }
+    .meals {
+        grid-template-columns: 1fr;
+    }
 }
+
+
+/* FOOTER */
+/* #footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-family: cursive;
+    font-size: 20px;
+    font-weight: bold;
+}
+  */
+ 
